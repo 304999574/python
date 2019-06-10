@@ -1,0 +1,548 @@
+/* 1.全局 */
+*{
+	transition:0.3s;
+}
+body{
+	position:relative;
+}
+body,ol,ul{
+	padding:0;
+	margin:0;
+	list-style:none;	
+}
+a{
+	text-decoration:none;
+	color:black;
+	
+}
+input,button{
+	outline:none;
+}
+
+
+.top{
+	background:url('../images/13.png');
+	background-repeat:none;
+	background-size:100% 100%;
+	height:100px;
+	width:100%;
+	color:#fff;
+	
+}
+
+/* 2.顶部左边 */
+.left{
+	float:left;
+}
+
+#imgid{
+	width:50px;
+	height:50px;
+	margin:25px 10px;
+}
+ul{
+	font:700 15px 宋体;
+	
+	position:relative;
+	vertical-align:center;
+}
+ul li{
+	float:left;
+	margin-right:0px;
+}
+ul #li0{
+	line-height:100px;
+	font-size:20px;
+	margin-right:40px;
+}
+ul #li0:hover{
+	cursor:pointer;
+	transform:scale(1.1);
+}
+p{
+	margin:0;
+	line-height:130px;
+}
+
+ul #div1,ul #div2,ul #div3{
+	display:none;
+	position:absolute;
+	top:100px;
+	left:250px;
+	width:1600px;
+	height:870px;
+	background:#fff;
+	border-top:20px solid rgb(245,245,245);
+	border-left:20px solid rgb(245,245,245);
+} 
+
+ul #div1{
+	display:block;
+}
+#li1 #divB1,#li2 #divB2,#li3 #divB3{
+	width:100%;
+	height:10px;
+	margin-top:2px;
+	
+}
+#li1 .urlcenter,#li2 .urlcenter,#li3 .urlcenter{
+	background:url('../images/11.png') no-repeat center;
+	
+}
+
+#li6{
+	width:70px;
+	height:100px;
+}
+
+.imgcl{
+	width:100px;
+	height:100px;
+	text-align:center;
+}
+
+/* .imgcl:hover{
+	background:rgb(209,46,49);
+	
+} */
+.imgcl:hover .max1{
+	transform:scale(1.15)
+}
+#divD1,#divD2,#divD3{
+	width:50px;
+	height:50px;
+	margin:8px auto;
+	margin-top:10px;
+}
+#divD1{
+	background:url('../images/6.png')
+}
+#divD2{
+	background:url('../images/14.png')
+}
+#divD3{
+	background:url('../images/7.png')
+}
+
+
+
+/* 2.内部 top*/
+#div2{
+	font:600 15px 微软雅黑;
+	color:#242424;
+}
+.div2text{
+	font:600 20px 微软雅黑;
+}
+#div2 div{
+	text-align:left;
+	margin-left:20px;
+	margin-top:30px;
+}
+#div2 input{
+	width:100px;
+	height:28px;
+	border:1px solid rgb(222,222,222);
+	border-radius:5px;
+	padding:0 10px;
+	margin:0 10px;
+}
+#div2 #input1{
+	width:200px;
+}
+/* #p{
+	width:1500px;
+	height:20px;
+	background:rgb(245,245,245);
+} */
+
+
+#div2Top{
+	width:550px;
+	height:280px;
+	border:1px solid rgb(222,222,222);
+	color:black;
+}
+#spanxs{
+	position:absolute;
+	left:600px;
+	top:0px;
+	width:800px;
+	height:703px;
+	border:1px solid rgb(222,222,222);
+	background:#fff;
+	overflow:auto;
+	/* background-image:linear-gradient(-135deg, rgb(256,73,74) 0%,  rgb(226,63,64) 100%); */
+}
+#spanxs p{
+	font-size:20px;
+	line-height:0;
+	text-align:center;
+	margin:30px;
+	padding:10px auto;
+	color:#000;
+}
+.tableT{
+	margin:10px auto;
+	width:700px;
+	border:1px solid rgb(222,222,222);
+	text-align:center;
+	box-sizing:border-box;
+	color:#000;
+}
+.tableT th{
+	height:32px;
+	font-size: 17px;
+}
+.tableT td,.tableT tr{
+	height:25px;
+	font-size: 13px;
+	border-color:rgb(222,222,222);
+}
+/* #spanxs div{
+	width:500px;
+	margin:10px auto;
+	border:1px solid rgb(222,222,222);
+} */
+#div2Mid{
+	width:550px;
+	height:280px;
+	border:1px solid rgb(222,222,222);
+}
+/* 内部mid */
+#div2 .checkS{
+	border:1px solid rgb(222,222,222);
+	background:#fff;
+	width:26px;
+	height:25px;
+	text-align:20px;
+	border-radius:4px;
+	text-align: center;
+	margin:0;
+	cursor:pointer;
+}
+#div2 .checkS:first-child{
+	margin-left:10px;
+}
+
+
+#div2Bot{
+	width:1400px;
+	height:80px;
+	border:1px solid rgb(222,222,222);
+	padding:0 auto;
+}
+#div2Bot div{
+	margin:0;
+	text-align:center;
+	line-height:80px;
+
+}
+#div2Bot input{
+	width:120px;
+	height:35px;
+	background:rgb(226,63,64);
+	color:#fff;
+	font-size:15px;
+	border:1px solid rgba(0,0,0,0);
+	}
+
+.spanM{
+	color:#ffaf02;
+}
+
+/* 3.顶部右边 */
+.right{
+	float:right;
+	font:700 15px 宋体;
+}
+ol li{
+	float:right;
+	line-height:100px;
+	margin-right:10px;
+	color:rgb(226,63,64);
+}
+
+
+/* 4.中间 */
+.mid{
+	width:1660px;
+	height:870px;
+	border-bottom:20px solid rgb(245,245,245);
+}
+#midleft{
+	width:250px;
+	height:870px;
+	background:rgb(226,63,64);
+	border:0px solid rgba(0,0,0,0);
+	border-top:1px solid rgba(173,39,39);
+	/* border-right:20px solid rgb(245,245,245); */
+	background:url('../images/2.png');
+	position:relative;
+}
+#midss{
+	position:absolute;
+	left:0;
+	top:700px;
+	width:250px;
+	height:250px;
+}
+
+#midss1{
+	line-height:50px;
+	padding-left:20px;
+	height:50px;
+	background:rgb(245,245,245);
+	box-sizing:border-box;
+}
+#midss2{
+	height:200px;
+}
+.midsx{
+	text-align:center;
+	margin-top:35px;
+	width:250px;
+
+}
+.midsx img{
+	vertical-align: top;
+}
+
+#midback{
+	margin-top:50px;
+	text-align:center;
+}
+#ucard{
+	width:200px;
+	height:30px;
+	border-radius:50px;
+	margin-top:10px;
+	background:#fff;
+	border:1px solid rgba(0,0,0,0);
+	
+}
+#uname{
+	width:250px;
+	height:20px;
+	line-height:20px;
+	color:#fff;
+	
+}
+#axufei{
+	margin-left:5px;
+	color:#ffaf02;
+}
+#imgmid1{
+	width:16px;
+	height:16px;
+	vertical-align: top;
+}
+#midmid p{
+	width:250px;
+	height:40px;
+	background:rgb(226,63,64);
+	color:#fff;
+	line-height:40px;
+	font-size:15px;
+	text-align:center;
+}
+.Mid1{
+	margin-top:120px;
+}
+.Mid2{
+	margin-top:30px;
+}
+/*   ----------------------充值框----------------------   */
+#div4{
+	position:absolute;
+	top:250px;
+	left:250px;
+	font-size:18px;
+	height:600px;
+	background:rgba(255,255,255,1);
+	overflow:hidden;
+}
+#div4 div{
+	display:none;
+	/* margin-left:20px; */
+	margin-top:20px;
+}
+.div4-true{
+	transition:0.8s cubic-bezier(0, 0.69, 1, 1.25) 0s;
+	width:800px;
+	border:10px solid rgb(222,222,222);
+	border-left:0px;
+	border-radius:0px 25px 25px 0;
+}
+.div4-false{
+	transition:0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+	width:0px;
+	border:0px solid rgb(222,222,222);
+
+}
+
+
+#div4 #div4Bz{
+	margin-left:0;
+	margin-top:0;
+	width:100%;
+	height:240px;
+	border-bottom:2px solid rgba(222,222,222,1);
+	overflow:hidden;
+}
+#div4 #div4Bz div{
+	margin-left:25px;
+}
+#div4 input[type=submit]{
+	width:120px;
+	height:35px;
+	background:rgb(226,63,64);
+	color:#fff;
+	font-size: 15px;
+	border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0);
+	cursor: pointer;
+}
+#div4 .radio{
+	width:100px;
+	height:35px;
+}
+
+#div4>div{
+	width:760px;
+}
+#div4 .radio{
+	display:none
+	/* visibility:hidden;  */
+	/*使用visibility方便调整间距。你也可以使用display:none;但是就无法调整间距了*/
+}
+#div4 #vip{
+	margin-left:50px;
+	width:40px;
+	height:25px;
+	border-radius: 5px;
+	padding:0px 10px;
+}
+#div4 #div4Cz{
+	width:100%;
+	height:350px;
+	/* border:1px solid rgba(222,222,222,1); */
+	overflow:hidden;
+}
+#div4Cz div{
+	margin:0px;
+	margin-left:20px;
+}
+
+
+#div4Cz span{
+	text-align:center;
+	display:inline-block;
+	margin-left:23px;
+	margin-top:20px;
+	width:220px;
+	height:80px;
+	border:2px solid rgba(222,222,222,1);
+	line-height:80px;
+	border-radius:10px;
+}
+#div4Cz span,#div4Cz label{
+	cursor: pointer;
+}
+#div4Cz div:last-child,#div4Bz div:last-child{
+	margin-top:30px;
+	text-align:center;
+}
+.select{
+	margin-left:50px;
+	padding-left: 30px;
+    cursor: pointer;
+    background:url('../images/15.png') no-repeat left;
+}
+.select:hover,.unselect:hover{
+	transform:scale(1.1);	
+}
+.unselect{
+	margin-left:50px;
+	padding-left: 30px;
+    cursor: pointer;
+    background:url('../images/16.png') no-repeat left;
+}
+#div4Cz #span{
+	transition:0.1s;
+	color:rgb(1,222,222);
+	border: 2px solid rgba(1,222,222,1);
+	transform:scale(1.1);	
+}
+/****************老赵写的广告弹窗样式*****************/
+#advert{
+	width:200px;
+	height:100px;
+	margin:auto;
+	margin-top:30px;
+	filter:blur(0);
+	color:rgb(226,63,64);
+	text-align: center;
+}#advert div{
+	height:30px;
+	width:200px;
+	border-radius: 200px;
+	cursor: pointer;
+	box-shadow: 0 0 5px -1px gray;
+}#advert div:hover{
+	box-shadow: 0 0 5px gray;
+}
+
+#realAd{
+	width:800px;
+	transform: scale(0);
+	height:400px;
+	z-index: 100;
+	border-radius: 20px;
+	position: fixed;
+	top:calc(50% - 200px);
+	left:calc(50% - 400px);
+	/* display: none; */
+	background:white;
+	box-shadow: 0 0 80px gray;
+	transition: 0.4s;
+}#image{
+	width:200px;
+	height:200px;
+	background: url('../images/money.png');
+	background-size: 200px 200px;
+	background-repeat: no-repeat;
+}#exitAd{
+	position: relative;
+	top:10px;
+	left:10px;
+	width:20px;
+	height:20px;
+	border-radius: 50%;
+	border:1px solid rgb(200,30,30);
+	background:rgb(255,40,40);
+	color:white;
+	text-align: center;
+	font-size: 19px;
+	cursor: pointer;
+}#adMainText{
+	color:white;
+	margin:105px;
+	margin-top:30px;
+	font-size: 30px;
+	background: rgb(226,63,64);
+	text-align: center;
+	border-radius: 30px;
+}#adText p{
+	color:rgb(226,63,64);
+	margin:10px;
+	font-size: 20px;
+	/* text-decoration: underline; */
+	text-align: right;
+	width:700px;
+	height:40px;
+}
+
+
+
+

@@ -1,0 +1,106 @@
+*{
+	transition:0.7s;
+}
+body,div{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+	color:rgb(224,28,28);
+}
+
+#top{
+	position:relative;
+}
+#img1{
+	width:100%;
+	height:0px;
+	background-color:rgb(226,63,64);
+	border-radius: 0 0 100px 100px;
+	box-shadow: grey 0px 5px 10px;
+	transition:0.9s;
+}
+
+#img3{
+	width:120px;
+	height:120px;
+	position:absolute;
+	top:90px;
+	left:50%;
+	margin-left:-60px;  
+	box-shadow: rgba(0,0,0,0.5) 0px 5px 20px;
+	border-radius: 50%;
+}
+#img3:hover{
+	transform: scale(1.2);
+}
+#top p{
+	width:250px;
+	position:absolute;
+	top:200px;
+	left:50%;
+	margin-left:-125px;
+	color:#fff;
+	font:500 22px Arial;
+}
+#top p:hover{
+	transform: scale(1.4);
+}
+#box>div{
+	text-align:center;
+}
+#mid{
+	
+	margin:50px auto;
+	width:350px;
+	height:500px;
+}
+
+#mid input{
+	box-sizing:border-box;
+	padding:10px;
+	margin-bottom:25px;
+	width:350px;
+	height:40px;
+	border:0 solid rgba(0,0,0,0);
+	border-bottom:1px solid rgb(169,169,169);
+	outline: none;
+	transition: 0.4s;
+	color:black;
+	font-size: 15px;
+}
+#mid .input1:focus{
+	border-bottom:1px solid rgb(244,28,28);
+	color:rgb(244,28,28);
+	font-size:20px;
+	height:60px;
+}
+
+#mid #lastInput{
+	margin-top:30px;
+	border:0px solid rgb(255,0,0);
+	background:rgb(244,28,28);
+	color:#fff;
+	font:600 15px youyuan;
+	border-radius: 20px;
+	outline: none;
+	transition: 0.2s;
+	cursor: pointer;
+	box-shadow: gray 0px 0px 0px;
+} 
+#mid #lastInput:hover{
+	box-shadow: gray 0px 5px 12px;
+}#mid #lastInput:active{
+	background:rgb(190,18,18);	
+	box-shadow: gray 0px 5px 15px;
+}
+#bottom{
+	font:600 15px Arial;
+	height:50px;
+	line-height:50px;
+	background:rgb(209,209,209);
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+}
