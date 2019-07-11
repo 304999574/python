@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="EditPlus®">
+    <meta name="Author" content="">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>阿尔法狗股票智能交易</title>
+    <link rel="stylesheet" href="../static/css/UiMain.css" type="text/css">
+    <script src='../static/js/jquery-3.1.1.js'></script>
+    <script src='../static/js/UiMain.js'></script>
+    <script type="text/javascript" src="../static/js/echarts.min.js"></script>
+    <script type="text/javascript" src='../static/js/ShareView1.js'></script>
+
+</head>
+<body>
+    <!--修改内容(彩蛋中的c)-->
+    <div id="cxkjn"></div>
+    <div id="centerCxk"></div>
+    <div id="cxklanqiu">
+        <div class="img"></div>
+    </div>
+    <div  class="fastDanmu danmu" id="danmu2">鸡你太美</div>
+    <div  class="fastDanmu danmu" id="danmu1">py合璧，天下无敌</div>
+    <div  class="slowDanmu danmu" id="danmu3">23333</div>
+    <div  class="slowDanmu danmu" id="danmu4">律师函警告（滑稽）</div>
+    <div  class="fastDanmu danmu" id="danmu5">鸡你太美</div>
+    <div  class="superfastDanmu danmu" id="danmu6">py合璧，天下无敌</div>
+    <div  class="slowDanmu danmu" id="danmu7">23333</div>
+    <div  class="slowDanmu danmu" id="danmu8">律师函警告（滑稽）</div>
+    <p class="fourSiders" id="four01"></p>
+    <p class="fourSiders" id="four02"></p>
+    <p class="fourSiders" id="four03"></p>
+    <p class="fourSiders" id="four04"></p>
+
+    <!--修改直到这里-->
+<div class='main'>
+    <div class='top'>
+        <div class='left'>
+            <ul>
+                <li id='li6'><img src="../static/images/1.png" alt="" id='imgid'></li>
+                <li id='li0'><b class="ttyellow">阿尔法狗</b>股票交易<span><b class="ttyellow">AlphaGo</b>Stockmartet</span></li>
+                <li class='imgcl' id='li1' value='0'>
+                    <div id='divD1' class='max1'></div>
+                    <div style="cursor:pointer;">观天象</div>
+                    <div id='divB1'></div>
+                    <div id="div1">
+                        <div id="div11">
+                            <span>股表代码：</span><input type="text" id="stockcode" placeholder="股表代码6位数" maxlength="6">
+                            <span>开始日期:</span><input type="date" id="sdate" placeholder="YYYY-MM-DD">
+                            <span>结束日期：</span><input type="date" id="edate" placeholder="YYYY-MM-DD">
+                            <button id="btnShow">查看历史行情</button>
+                            <span></span>
+                        </div>
+                        <div id="div12">
+
+                        </div>
+                    </div>
+                </li>
+
+                <li class='imgcl' id='li2' value='1'>
+                    <div id='divD2' class='max1'></div>
+                    <div style="cursor:pointer;">搜神明</div>
+                    <div id='divB2'></div>
+
+                    <div id='div2'>
+                        <p id='p'></p>
+                        <div class='div2text'>基本设置</div>
+                        <div id='div2Top'>
+                            <div>
+                                <input type="text" placeholder='股票代码(6位数)' id='input1' name="storkcode" maxlength="6">
+                                 <button id="btn1">查询</button>
+                                <span id="textname"></span>
+                            </div>
+                            <div>
+                                <span class='spanSum'>股票低于</span>
+                                <input type="number" class='inputNu' step='100' min='0' id="smallprice">元&nbsp&nbsp
+
+                            </div>
+                            <div>
+                                <span class='spanSum'>购买数量</span>
+                                <input type="number" class='inputNu' step='100' min='0'>股
+                            </div>
+                            <div>
+                                <span class='spanSum'>监控时间</span>
+                                开始:<input type="datetime-local" name="strtime" placeholder="YYYY-MM-DD --:--" >&nbsp停止:<input name="endtime" type="datetime-local" placeholder="YYYY-MM-DD --:--">
+                            </div>
+                            <div>
+                                刷新频率:<input type="number" oninput="if(value>60)value=60;if(value.length>2)value=value.slice(0,2);if(value<1)value=1">秒
+                            </div>
+                        </div>
+                        <div id='spanxs'>
+                            <p id="specialSpon">股票信息列表</p>
+                            <div id="spanxx">
+                            <table class="tableT" border='1' cellspacing="0" cellpadding="0">
+                                <thead>
+                                <tr>
+                                    <th>股票名称</th>
+                                    <th>股票代码</th>
+                                    <th>当前价格</th>
+                                    <th>涨 跌</th>
+                                    <th>涨 跌(%)</th>
+                                    <th>成交量(手)</th>
+                                    <th>成交额(万)</th>
+                                </tr>
+                                </thead>
+                                <tbody id="ccc">
+                                </tbody>
+                            </table>
+                            </div>
+                            <p>任务列表</p>
+                            <div>
+                            <table class="tableT" border='1' cellspacing="0" cellpadding="0">
+                                <thead>
+                                <tr>
+                                    <th>股票名称</th>
+                                    <th>股票代码</th>
+                                    <th>当前价格</th>
+                                    <th>涨 跌</th>
+                                    <th>涨 跌(%)</th>
+                                    <th>成交量(手)</th>
+                                    <th>成交额(万)</th>
+                                </tr>
+                                </thead>
+                                <tbody id="ccc2">
+
+
+                                </tbody>
+                            </table>
+                            </div>
+
+                        </div>
+                        <div class='div2text'>
+                            智能选股
+                        </div>
+                        <div id='div2Mid'>
+                            <div>
+                            <select name="" id="OP1">
+                                <option value="01" id="op01">高级vip</option>
+                                <option value="02" id="op02">vip</option>
+                            </select>
+                            <select name="" id="OP2">
+                                <option value="03" id="op03">数据定价</option>
+                                <option value="04" id="op04">智能定价</option>
+                            </select>
+                                <button id="buttonOP">查询牛股</button>
+                                <span id="buttonOP1"></span>
+                            </div>
+                            <div >
+                                <table border='1' cellspacing="0" cellpadding="0">
+                                    <thead>
+                                    <tr>
+                                    <th>股票名称</th>
+                                    <th>股票代码</th>
+                                    <th>可买入价格</th>
+                                    <th>买入数量/股</th>
+                                        <th>合计</th>
+                                        <td>+</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="OP3">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div id='div2Bot'>
+                            <div>
+                                <input type="submit" value='添加任务' id="submit1">
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+
+                <li class='imgcl' id='li3' value='1'>
+                    <div id='divD3' class='max1'></div>
+                    <div style="cursor:pointer;">紫微斗数</div>
+                    <div id='divB3'></div>
+                    <div id='div3'>
+                        <p id='p'></p>
+
+{#                        <div id='div3Top'>#}
+{#                            <p>股票购买记录列表</p>#}
+{#                            <table border='1' cellspacing="0" cellpadding="0">#}
+{#                            <thead>#}
+{#                            <th>股票名称</th>#}
+{#                            <th>股票代码</th>#}
+{#                            <th>买入时间</th>#}
+{#                            <th>卖出价格</th>#}
+{#                            <th>持股数量</th>#}
+{#                            </thead>#}
+{#                            <tbody>#}
+{#
+{#                            </tbody>#}
+{#                            </table>#}
+{#                        </div>#}
+                        <div id='spanxss'>
+                            <p><span>股票购买记录列表</span><button style="margin-left: 20px" id="stockLook">查询股票记录</button></p>
+                            <table class="tableTs" border='1' cellspacing="0" cellpadding="0">
+                                <thead>
+                                <tr>
+                                    <th>股票名称</th>
+                                    <th>股票代码</th>
+                                    <th>买入时间</th>
+                                    <th>数量</th>
+                                    <th>买入时价格</th>
+                                </tr>
+                                </thead>
+                                <tbody id="sss">
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+        <div class='right'>
+            <ol>
+                <a href="/delect">退出</a>
+                <a href="/loginregister">登录</a>
+            </ol>
+        </div>
+        <div id="rightWe">
+            <iframe id="rightWe1" scrolling="no" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=36&icon=5&num=5"></iframe>
+        </div>
+    </div>
+    <div class='mid'>
+        <div id='midleft'>
+            <div id='midback'>
+                <div id="fxxking-float">
+                    <img src='{{ parms.user.path }}' alt="" id='imgmid'>
+                    <div class="btm">
+                        <span href="#" class="upload-profile-img">更换头像</span>
+                    </div>
+                    <!-- 右尖角图标实现退出-->
+                    <div id="fxxking-window">
+                        <div id="fxxking-arrow"></div>
+                        <div id="fxxking-flag">
+                            <form action="/upload_profile_photo" method="post" enctype="multipart/form-data">
+                                <div id="file">
+                                    <label for="file-input">上传头像</label>
+                                    <input type="file" id="file-input" name="file-input" hidefocus="true" accept="image/jpeg, image/jpg, image/png">
+                                </div>
+                                <span class="u-cue-info">支持jpg、png、bmp格式的图片，且文件小于20M</span>
+                                <div id="make-sure-u-fxxking-img">
+                                    <input type="submit" id="submit_u_fxxking_img" value='提交'>
+{#                                    <button id="cancel_u_fxxking_img">取消</button>#}
+                                </div>
+                                <div id="prev-img">
+                                    <div id="u-chosen-img"></div>
+                                    <!--< img src="../static/images/default.png" id="u-chosen-img">-->
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <p id='uname' class="uname">{{parms.user.uname}}</p>
+                <p class="uname" id="vip9">
+                    {% if parms.user.vipTime  == "普通账户" or parms.user.vipTime =="null" or parms.user.vipTime==None %}
+                    普通账户
+                    {% else %}
+                    至尊账户
+                    {% endif %}
+                </p>
+                <span id='ucard'>
+                    <img src='../static/images/5.png' alt="" id='imgmid1'>
+                    <a href="javascript:void(0)" id="vip10">
+						{% if parms.user.vipTime == "普通账户"or parms.user.vipTime=="null" or parms.user.vipTime==None %}
+							开通会员更便捷
+						{% else %}
+							{{parms.user.vipTime}}到期
+						{% endif %}
+                    </a>
+                    <a href="javascript:void(0)" id='axufei'>续费</a>
+                </span>
+
+
+            </div>
+            <div id='midmid'>
+                <p class='Mid1'>机智模拟 1110***1101</p>
+                <p class='Mid2'>行情软件 中国证券**</p>
+
+                <div id="advert">
+                    <div id="adButton">点击查看页面彩蛋</div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div id='midss'>
+            <div id='midss1'>账户</div>
+            <div id='midss2'>
+                <div class='midsx'>
+                    <img src="../static/images/12.png" alt="">
+                    可用资金:<span id="umoney1">{{parms.user.avaMoney}}</span>元
+                </div>
+                <div class='midsx'>
+                    <img src="../static/images/10.png" alt="">
+                    股票价值:<span id="umoney3">{{parms.user.stockMoney }}</span>元
+                </div>
+                <div class='midsx'>
+                    <img src="../static/images/9.png" alt="">
+                    资产总值:<span id="umoney2">{{parms.user.amt}}</span>元
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id='div4'>
+        <div id='div4Bz'>
+            <div style='text-align:center'>
+                <span style='color:rgb(226,63,64);font-size:23px;'><b>至尊vip服务</b></span>
+            </div>
+            <div>
+                <span>付费模式:</span>
+                <span>
+					<input type="radio" class='radio' name='num1' id='month'>
+					<label for="month" class='select'>按月付费</label>
+				</span>
+                <span>
+					<input type="radio" class='radio' name='num1' id='year'>
+					<label for="year" class='unselect'>按年付费</label>
+				</span>
+            </div>
+            <div>
+                <span>开通时长:</span>
+                <input type="number" name='num2' id='vip' value='1'
+                       oninput="if(value>12)value=12;if(value.length>2)value=value.slice(0,2);if(value<1)value=1">
+
+                <span id='vip1' class='true1'>月</span>
+            </div>
+            <div>
+                <input type="submit" value='确认充值' id="subVip">
+            </div>
+        </div>
+
+        <div id='div4Cz'>
+            <div style='color:rgb(226,63,64);font-size:23px;text-align:center;margin-top:20px;'>
+                <b>账户充值</b>
+            </div>
+            <div>
+				<span>
+					<input type="radio" class='radio' name='sum1' id='number1'>
+					<label for="number1" class="number">￥1000</label>
+				</span>
+                <span>
+					<input type="radio" class='radio' name='sum1' id='number2'>
+					<label for="number2" class="number">￥5000</label>
+				</span>
+                <span>
+					<input type="radio" class='radio' name='sum1' id='number3'>
+					<label for="number3" class="number">￥10000</label>
+				</span>
+
+            </div>
+            <div>
+				<span>
+					<input type="radio" class='radio' name='sum1' id='number4'>
+					<label for="number4" class="number">￥50000</label>
+				</span>
+                <span>
+					<input type="radio" class='radio' name='sum1' id='number5'>
+					<label for="number5" class="number">￥100000</label>
+				</span>
+                <span>
+					<input type="radio" class='radio' name='sum1' id='number6'>
+					<label for="number6" class="number">￥500000</label>
+				</span>
+            </div>
+            <div>
+                <input type="submit" value='确认充值' id="subRmb">
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+<div id="realAd">
+    <div id="exitAd">×</div>
+    <div id="adMainText">页面の沙雕彩蛋</div>
+    <div id="adText">
+        <p id="spin">据说点击这个能治疗颈椎病</p>
+        <p id="invert">颜色可能会发生变化</p>
+        <p id="rotate">忘了这个是哈...额...特尴尬</p>
+        <p id="mirror">会让人看不懂文字?</p>
+        <p id="strange">也忘了这个是干啥的...</p>
+        <p id="rainbow">看!是个彩虹!</p>
+        <p id="cxk">邀请cxk上台</p>
+    </div>
+    <div></div>
+
+</div>
+</body>
+</html>
